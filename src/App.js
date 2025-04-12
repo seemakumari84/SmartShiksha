@@ -3,7 +3,6 @@ import React from 'react';
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from "./pages/Login";
-
 import Notes from './pages/Notes';
 import PYQs from './pages/PYQs';
 import Labs from './pages/Labs';
@@ -16,7 +15,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <Router>
-    {isLoggedIn ? (
+    {/* {isLoggedIn ? ( */}
       <>
         <Navbar />
         <Routes>
@@ -28,9 +27,9 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
       </>
-    ) : (
+    {/* ) : (
       <Login onLogin={() => setIsLoggedIn(true)} />
-    )}
+    )} */}
   </Router>
 );
 }
