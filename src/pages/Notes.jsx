@@ -2,36 +2,36 @@ import React, { useState } from "react";
 
 const notesData = {
   "Semester 1": {
-    "Introduction to Computing": "https://drive.google.com/your-link-1",
-    "Engineering Physics": "https://drive.google.com/your-link-2",
-    "Communicative English": "https://drive.google.com/your-link-3",
+    "Introduction to Computing": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Engineering Physics": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Communicative English": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
   },
   "Semester 2": {
-    "Engineering Chemistry": "https://drive.google.com/your-link-4",
-    "Electrical Workshop": "https://drive.google.com/your-link-5",
-    "Engineering Graphics": "https://drive.google.com/your-link-6",
+    "Engineering Chemistry": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Electrical Workshop": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Engineering Graphics": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
   },
   "Semester 3": {
-    "Electrical Machines-I": "https://drive.google.com/your-link-7",
-    "Analog Electronics": "https://drive.google.com/your-link-8",
+    "Electrical Machines-I": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Analog Electronics": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
   },
   "Semester 4": {
-    "Electrical Machines-II": "https://drive.google.com/your-link-9",
-    "Digital Electronics": "https://drive.google.com/your-link-10",
+    "Electrical Machines-II": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Digital Electronics": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
   },
   "Semester 5": {
-    "Power Electronics": "https://drive.google.com/your-link-11",
-    "Signal and System Analysis": "https://drive.google.com/your-link-12",
+    "Power Electronics": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Signal and System Analysis": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
   },
   "Semester 6": {
-    "Power System Protection": "https://drive.google.com/your-link-13",
-    "Industrial Drives and Control": "https://drive.google.com/your-link-14",
+    "Power System Protection": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Industrial Drives and Control": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
   },
   "Semester 7": {
-    "Dissertation - I": "https://drive.google.com/your-link-15",
+    "Dissertation - I": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
   },
   "Semester 8": {
-    "Dissertation - II": "https://drive.google.com/your-link-16",
+    "Dissertation - II": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
   },
 };
 
