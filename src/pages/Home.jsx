@@ -5,13 +5,13 @@ import Timeline from "../components/Timeline";
 const Home = () => {
   return (
     <AnimatedPage>
-      <div className="min-h-screen bg-white px-4 py-10 md:px-20 font-sans">
+      <div className="min-h-screen px-4 py-10 md:px-20 font-sans text-gray-800">
         {/* Welcome Header */}
         <header className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold text-gray-800 mb-3 drop-shadow-md transition-all duration-500 hover:scale-105 hover:text-gray-600">
-            Welcome to <span className="text-blue-600">SmartShiksha</span>
+          <h1 className="text-5xl font-extrabold mb-3 drop-shadow-md transition-all duration-500 hover:scale-105 hover:text-gray-600">
+            Welcome to <span className="text-green-700">SmartShiksha</span>
           </h1>
-          <p className="text-xl text-gray-600 font-medium max-w-3xl mx-auto">
+          <p className="text-xl font-medium max-w-3xl mx-auto">
             Breaking Barriers, Building CGPA. We are here to help you grow academically.
           </p>
         </header>
@@ -19,9 +19,9 @@ const Home = () => {
         {/* 3-Column Layout Start */}
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {/* Class Contents */}
-          <section className="bg-white hover:scale-105 transition-all duration-300 rounded-xl shadow-md p-6 space-y-4">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">📚 Class Contents</h2>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+          <section className="bg-[#e6f7e6] rounded-xl shadow-md p-6 space-y-4 hover:bg-[#99e699] transition-all duration-300 hover:scale-105">
+            <h2 className="text-2xl font-semibold mb-4">📚 Class Contents</h2>
+            <ul className="list-disc pl-6 space-y-2">
               <li>Class Notes (8 Jan – Today)</li>
               <li>Lab Files</li>
               <li>Assignments</li>
@@ -31,9 +31,9 @@ const Home = () => {
           </section>
 
           {/* Important Dates */}
-          <section className="bg-white hover:scale-105 transition-all duration-300 rounded-xl shadow-md p-6 space-y-4">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">📅 Important Dates</h2>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+          <section className="bg-[#e6f7e6] rounded-xl shadow-md p-6 space-y-4 hover:bg-[#99e699] transition-all duration-300 hover:scale-105">
+            <h2 className="text-2xl font-semibold mb-4">📅 Important Dates</h2>
+            <ul className="list-disc pl-6 space-y-2">
               <li>Semester Start: 8 Jan 2024</li>
               <li>Mid-Sem: 11–22 Mar 2024</li>
               <li>End-Sem: 7–21 May 2024</li>
@@ -41,30 +41,30 @@ const Home = () => {
           </section>
 
           {/* Free Courses */}
-          <section className="bg-white hover:scale-105 transition-all duration-300 rounded-xl shadow-md p-6 space-y-4">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">🆓 Free Courses</h2>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+          <section className="bg-[#e6f7e6] rounded-xl shadow-md p-6 space-y-4 hover:bg-[#99e699] transition-all duration-300 hover:scale-105">
+            <h2 className="text-2xl font-semibold mb-4">🆓 Free Courses</h2>
+            <ul className="list-disc pl-6 space-y-2">
               <li>JavaScript Full Course</li>
               <li>Backend Development</li>
               <li>App Development</li>
               <li>MATLAB</li>
             </ul>
           </section>
-
+          
           {/* YouTube Classes */}
-          <section className="bg-white hover:scale-105 transition-all duration-300 rounded-xl shadow-md p-6 space-y-4">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">🎥 YouTube Classes</h2>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li><a href="https://youtube.com" target="_blank" rel="noreferrer" className="text-blue-500 hover:underline">EMFT</a></li>
-              <li><a href="https://youtube.com" target="_blank" rel="noreferrer" className="text-blue-500 hover:underline">MPMC</a></li>
-              <li><a href="https://youtube.com" target="_blank" rel="noreferrer" className="text-blue-500 hover:underline">DSP & OOP</a></li>
+          <section className="bg-[#e6f7e6] rounded-xl shadow-md p-6 space-y-4 hover:bg-[#99e699] transition-all duration-300 hover:scale-105">
+            <h2 className="text-2xl font-semibold mb-4">🎥 YouTube Classes</h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><a href="#" className="text-green-600 hover:underline">EMFT</a></li>
+              <li><a href="#" className="text-green-600 hover:underline">MPMC</a></li>
+              <li><a href="#" className="text-green-600 hover:underline">DSP & OOP</a></li>
             </ul>
           </section>
 
           {/* Subjects Covered */}
-          <section className="bg-white hover:scale-105 transition-all duration-300 rounded-xl shadow-md p-6 xl:col-span-2 space-y-4">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">📘 Subjects Covered</h2>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+          <section className="bg-[#e6f7e6] xl:col-span-2 rounded-xl shadow-md p-6 space-y-4 hover:bg-[#99e699] transition-all duration-300 hover:scale-105">
+            <h2 className="text-2xl font-semibold mb-4">📘 Subjects Covered</h2>
+            <ul className="list-disc pl-6 space-y-2">
               {[
                 { title: "Electromagnetic Field Theory", link: "https://www.youtube.com/watch?v=BQ5JYL0BFtk&list=PLxlldU21bDqMaZghkk1OxO62MKSHkzPU7" },
                 { title: "Microprocessor & Microcontroller", link: "https://www.youtube.com/watch?v=jte2S2iWRMI&list=PLBlnK6fEyqRgyFCCgqdcBowmSp_BTKs4F" },
@@ -76,7 +76,7 @@ const Home = () => {
                 { title: "Digital IC Design", link: "https://www.youtube.com/watch?v=g6CCJAbdkK8&list=PLHO2NKv71TvsSqYwVvUCZwNkY-jUyUHdS" },
               ].map((subject, i) => (
                 <li key={i}>
-                  <a href={subject.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                  <a href={subject.link} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
                     {subject.title}
                   </a>
                 </li>
@@ -86,31 +86,31 @@ const Home = () => {
         </div>
 
         {/* Roadmaps & Guidance */}
-        <section className="bg-white hover:scale-105 transition-all duration-300 rounded-xl shadow-md p-6 mb-10 space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">🛠️ Roadmaps & Guidance</h2>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li><a href="https://drive.google.com" target="_blank" rel="noreferrer" className="text-blue-500 hover:underline">DSA Notes</a></li>
-            <li><a href="https://drive.google.com" target="_blank" rel="noreferrer" className="text-blue-500 hover:underline">Web Dev Roadmap</a></li>
-            <li><a href="https://drive.google.com" target="_blank" rel="noreferrer" className="text-blue-500 hover:underline">Resume Guide</a></li>
+        <section className="bg-[#e6f7e6] rounded-xl shadow-md p-6 mb-10 space-y-4 hover:bg-[#99e699] transition-all duration-300 hover:scale-105">
+          <h2 className="text-2xl font-semibold mb-4">🛠️ Roadmaps & Guidance</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><a href="#" className="text-green-600 hover:underline">DSA Notes</a></li>
+            <li><a href="#" className="text-green-600 hover:underline">Web Dev Roadmap</a></li>
+            <li><a href="#" className="text-green-600 hover:underline">Resume Guide</a></li>
           </ul>
         </section>
 
         {/* Timeline */}
-        <section className="bg-white hover:scale-105 transition-all duration-300 rounded-xl shadow-md p-6 mb-10">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">📅 Semester Timeline</h2>
+        <section className="bg-[#e6f7e6] rounded-xl shadow-md p-6 mb-10 hover:bg-[#99e699] transition-all duration-300 hover:scale-105">
+          <h2 className="text-2xl font-semibold mb-4">📅 Semester Timeline</h2>
           <Timeline />
         </section>
 
         {/* Syllabus Selector */}
-        <section className="bg-white hover:scale-105 transition-all duration-300 rounded-xl shadow-md p-6 mb-10">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">📝 Syllabus</h2>
+        <section className="bg-[#e6f7e6] rounded-xl shadow-md p-6 mb-10 hover:bg-[#99e699] transition-all duration-300 hover:scale-105">
+          <h2 className="text-2xl font-semibold mb-4">📝 Syllabus</h2>
           <div className="mb-4">
-            <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
+            <label htmlFor="subject" className="block font-medium mb-2">
               Choose your subject:
             </label>
             <select
               id="subject"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               <option value="">-- Select a Subject --</option>
               <option value="emft">Electromagnetic Field Theory</option>
@@ -124,17 +124,17 @@ const Home = () => {
             </select>
           </div>
           <div className="mt-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">📖 Topics Covered</h3>
-            <p className="text-gray-600">
+            <h3 className="text-lg font-semibold mb-2">📖 Topics Covered</h3>
+            <p>
               Please select a subject above to view the syllabus topics. (Dynamic content coming soon!)
             </p>
           </div>
         </section>
 
         {/* Contact Info */}
-        <section className="bg-white hover:scale-105 transition-all duration-300 rounded-xl shadow-md p-6 mb-20">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">📬 Contact Info</h2>
-          <ul className="text-gray-700 space-y-1 pl-6 list-disc">
+        <section className="bg-[#e6f7e6] rounded-xl shadow-md p-6 mb-20 hover:bg-[#99e699] transition-all duration-300 hover:scale-105">
+          <h2 className="text-2xl font-semibold mb-4">📬 Contact Info</h2>
+          <ul className="space-y-1 pl-6 list-disc">
             <li>Email: nauser522@gmail.com</li>
             <li>Phone: 8603410057</li>
             <li>Career Support: career@studymasalaa.com</li>
