@@ -6,8 +6,10 @@ const SubmitNotes = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadSuccess, setUploadSuccess] = useState(false);
 
+  // Example of notesData with actual data
   const notesData = {
-    // make sure this has actual data
+    semester1: { subject1: "Notes for Subject 1", subject2: "Notes for Subject 2" },
+    semester2: { subject1: "Notes for Subject 1", subject2: "Notes for Subject 2" },
   };
 
   const subjects = selectedSemester ? Object.keys(notesData[selectedSemester]) : [];
@@ -40,7 +42,61 @@ const SubmitNotes = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 via-white to-blue-100 flex flex-col items-center justify-center p-6">
       <h1 className="text-3xl font-bold text-blue-700 mb-8">📚 Access Notes Drive</h1>
-      {/* rest of the JSX stays same */}
+      <form onSubmit={handleFileSubmit} className="space-y-4">
+        <div>
+          <label htmlFor="semester" className="block text-sm font-semibold">Select Semester:</label>
+          <select
+            id="semester"
+            value={selectedSemester}
+            onChange={(e) => setSelectedSemester(e.target.value)}
+            className="p-2 border rounded"
+          >
+            <option value="">Select a semester</option>
+            <option value="semester1">Semester 1</option>
+            <option value="semester2">Semester 2</option>
+          </select>
+        </div>
+
+        {selectedSemester && (
+          <div>
+            <label htmlFor="subject" className="block text-sm font-semibold">Select Subject:</label>
+            <select
+              id="subject"
+              value={selectedSubject}
+              onChange={(e) => setSelectedSubject(e.target.value)}
+              className="p-2 border rounded"
+            >
+              <option value="">Select a subject</option>
+              {subjects.map((subject) => (
+                <option key={subject} value={subject}>
+                  {notesData[selectedSemester][subject]}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+
+        <div>
+          <label htmlFor="file" className="block text-sm font-semibold">Upload Notes:</label>
+          <input
+            type="file"
+            id="file"
+            onChange={(e) => setSelectedFile(e.target.files[0])}
+            className="p-2 border rounded"
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="mt-4 p-2 bg-blue-600 text-white rounded"
+        >
+          Submit Notes
+        </button>
+      </form>
+
+      {uploadSuccess && (
+        <p className="mt-4 text-green-600">File uploaded successfully!</p>
+      )}
     </div>
   );
 };
