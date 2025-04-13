@@ -1,3 +1,54 @@
+# 📚 SmartShiksha
+
+SmartShiksha is a centralized educational platform designed to make academic resources easily accessible to students. It helps students stay organized with features like Notes, PYQs, Lab Files, Courses, and even a Quiz section — all in one place.
+
+🛠️ Built during ByteVerse Hackathon 2025 🚀
+
+---
+
+## 🌐 Live Demo
+
+[👉 Click here to visit SmartShiksha](http://localhost:3000) *(Replace with actual deployed link if available)*
+
+---
+
+## 🧠 Inspiration
+
+During college, we often find ourselves hunting for scattered resources like notes, previous year questions (PYQs), and lab files across WhatsApp groups, drive links, or classmates. SmartShiksha brings all that together into a single, beautiful, responsive web app.
+
+---
+
+## 💡 Features
+
+- ✅ Centralized repository for:
+  - 📖 Notes
+  - 📝 PYQs (Previous Year Questions)
+  - 🧪 Lab Files
+  - 🎓 Online Courses
+  - 📤 Upload feature for submitting your own notes
+- 🧠 Quiz Section to test your knowledge
+- 🔐 Simple Signup/Login Page
+- 💻 Built with React + Tailwind CSS
+- 📱 Fully Responsive UI
+
+---
+
+## 🖼️ Screenshots
+
+*(Add screenshots here if possible)*
+
+---
+
+## 🚀 Getting Started
+
+Clone the project and run it locally.
+
+```bash
+git clone https://github.com/Ranikumari16/SmartShiksha.git
+cd SmartShiksha
+npm install
+npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
