@@ -8,7 +8,7 @@ SmartShiksha is a centralized educational platform designed to make academic res
 
 ## 🌐 Live Demo
 
-[👉 Click here to visit SmartShiksha](http://localhost:3000) *(Replace with actual deployed link if available)*
+[👉 Click here to visit SmartShiksha](https://smart-shiksha-virid.vercel.app) *(Replace with actual deployed link if available)*
 
 ---
 
