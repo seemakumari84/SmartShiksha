@@ -136,16 +136,15 @@ const Home = () => {
         <section className="bg-[#e6f7e6] rounded-xl shadow-md p-6 mb-20 hover:bg-[#99e699] transition-all duration-300 hover:scale-105">
           <h2 className="text-2xl font-semibold mb-4">📬 Contact Info</h2>
           <ul className="space-y-1 pl-6 list-disc">
-            <li>Email: nauser522@gmail.com</li>
-            <li>Phone: 8603410057</li>
-            <li>Career Support: career@studymasalaa.com</li>
+            <li>Email: smartshiksha@gmail.com</li>
+            <li>Phone: 1234567890</li>
+            <li>Career Support: career@smartshiksha.com</li>
           </ul>
         </section>
 
         {/* Footer */}
         <footer className="text-center mt-12 text-gray-600 text-sm border-t pt-6">
-          <p>&copy; 2025 StudyMasalaa.com. All rights reserved.</p>
-          <p>Total Visits: [Visit Counter Here]</p>
+          <p>&copy; 2025 SmartShiksha.com. All rights reserved.</p>
         </footer>
       </div>
     </AnimatedPage>
