@@ -1,6 +1,7 @@
 import React from "react";
 import AnimatedPage from "../components/Animate";
 import Timeline from "../components/Timeline";
+import MenuBar from "../components/MenuBar";
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
           <p className="text-xl font-medium max-w-3xl mx-auto">
             Breaking Barriers, Building CGPA. We are here to help you grow academically.
           </p>
-        </header>
+        </header><MenuBar/>
 
         {/* 3-Column Layout Start */}
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">

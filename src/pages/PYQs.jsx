@@ -1,66 +1,38 @@
 import React, { useState } from "react";
 
 const pyqData = {
-    "Semester 1": {
-        "Introduction to Computing (CSE)": "https://drive.google.com/drive/folders/1abcEXAMPLE-intro-computing",
-        "Engineering Physics (PHY)": "https://drive.google.com/drive/folders/1abcEXAMPLE-physics",
-        "Communicative English (HS)": "https://drive.google.com/drive/folders/1abcEXAMPLE-english",
-        "Elements of Electrical Engineering - I (EE)": "https://drive.google.com/drive/folders/1abcEXAMPLE-elec1",
-        "Elements of Electronics Engineering (EC)": "https://drive.google.com/drive/folders/1abcEXAMPLE-elec-engg",
-        "EAA-I - Sports/Innovative/NCC/NSS": "https://drive.google.com/drive/folders/1abcEXAMPLE-eaa1"
-      },
-      "Semester 2": {
-        "Engineering Mathematics - I (MA26101)": "https://drive.google.com/drive/folders/1abcEXAMPLE-math1",
-        "Engineering Chemistry (CH26101)": "https://drive.google.com/drive/folders/1abcEXAMPLE-chem",
-        "Elements of Electrical Engineering - II (EE26105)": "https://drive.google.com/drive/folders/1abcEXAMPLE-elec2",
-        "Electrical Workshop (EE26106)": "https://drive.google.com/drive/folders/1abcEXAMPLE-elec-work",
-        "Electronics Workshop (EC26105)": "https://drive.google.com/drive/folders/1abcEXAMPLE-elec-ws",
-        "Engineering Graphics (ME26101)": "https://drive.google.com/drive/folders/1abcEXAMPLE-eng-graphics",
-        "EAA-II - Swachh Bharat Mission (EAA26102)": "https://drive.google.com/drive/folders/1abcEXAMPLE-sbm",
-      },
-      "Semester 3": {
-        "Electrical Machines-I (EE36101)": "https://drive.google.com/drive/folders/1abcEXAMPLE-machines1",
-        "Network Analysis and Synthesis (EE36102)": "https://drive.google.com/drive/folders/1abcEXAMPLE-network",
-        "Electrical Measurement and Instrumentation (EE36103)": "https://drive.google.com/drive/folders/1abcEXAMPLE-measurement",
-        "Electromagnetic Field Theory (EE36104)": "https://drive.google.com/drive/folders/1abcEXAMPLE-emt",
-        "Analog Electronics (EC36101)": "https://drive.google.com/drive/folders/1abcEXAMPLE-analog",
-        "Engineering Mathematics - II (MA36101)": "https://drive.google.com/drive/folders/1abcEXAMPLE-math2",
-      },
-      "Semester 4": {
-        "Electrical Machine-II (EE)": "https://drive.google.com/drive/folders/4abcEM2",
-        "Power Transmission and Distribution (EE)": "https://drive.google.com/drive/folders/4abcPTD",
-        "Linear Control System (EE)": "https://drive.google.com/drive/folders/4abcLCS",
-        "Digital Electronics (EC)": "https://drive.google.com/drive/folders/4abcDE",
-        "Object Oriented Programming (CSE)": "https://drive.google.com/drive/folders/4abcOOP",
-        "Seminar and Technical Writing (EE)": "https://drive.google.com/drive/folders/4abcSTW",
-      },
-    
-      "Semester 5": {
-        "Power System Analysis (EE)": "https://drive.google.com/drive/folders/5abcPSA",
-        "Power Electronics (EE)": "https://drive.google.com/drive/folders/5abcPE",
-        "Microprocessor, Microcontroller and its Application (EE)": "https://drive.google.com/drive/folders/5abcMPMC",
-        "Signal and System Analysis (EC)": "https://drive.google.com/drive/folders/5abcSSA",
-        "Professional Ethics (HS)": "https://drive.google.com/drive/folders/5abcEthics",
-        "Departmental Elective - I (EE)": "https://drive.google.com/drive/folders/5abcDE1",
-      },
-    
-      "Semester 6": {
-        "Industrial Drives and Control (EE)": "https://drive.google.com/drive/folders/6abcIDC",
-        "Power System Protection and Switchgear (EE)": "https://drive.google.com/drive/folders/6abcPSP",
-        "Minor Project (EE)": "https://drive.google.com/drive/folders/6abcMP",
-        "Departmental Elective - II (EE)": "https://drive.google.com/drive/folders/6abcDE2",
-        "Open Elective – I / MOOC / Swayam (Other Dept.)": "https://drive.google.com/drive/folders/6abcOE",
-        "Industrial Training (EE)": "https://drive.google.com/drive/folders/6abcIT",
-      },
-    
-      "Semester 7": {
-        "Dissertation - I (EE)": "https://drive.google.com/drive/folders/7abcD1",
-        "Comprehensive Viva (EE)": "https://drive.google.com/drive/folders/7abcViva",
-      },
-    
-      "Semester 8": {
-        "Dissertation - II (EE)": "https://drive.google.com/drive/folders/8abcD2",
-      },
+  "Semester 1": {
+    "Introduction to Computing": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Engineering Physics": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Communicative English": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+  },
+  "Semester 2": {
+    "Engineering Chemistry": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Electrical Workshop": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Engineering Graphics": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+  },
+  "Semester 3": {
+    "Electrical Machines-I": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Analog Electronics": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+  },
+  "Semester 4": {
+    "Electrical Machines-II": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Digital Electronics": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+  },
+  "Semester 5": {
+    "Power Electronics": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Signal and System Analysis": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+  },
+  "Semester 6": {
+    "Power System Protection": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+    "Industrial Drives and Control": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+  },
+  "Semester 7": {
+    "Dissertation - I": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+  },
+  "Semester 8": {
+    "Dissertation - II": "https://drive.google.com/drive/folders/1hIVVMDffOt19JrvSasCtU2fLE83kdGY0",
+  },
 };
 
 const PYQDriveAccess = () => {

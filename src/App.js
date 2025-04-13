@@ -26,7 +26,7 @@ function App() {
             <Route path="/labs" element={<Labs />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/submit-notes" element={<SubmitNotes />} />
-            <Route path="/quiz" element={<Quiz />} /> {/* ✅ FIXED: moved inside Routes */}
+            <Route path="/quiz" element={<Quiz />} /> 
           </Routes>
         </>
       {/* ) : (
