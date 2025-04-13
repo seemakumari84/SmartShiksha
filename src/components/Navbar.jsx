@@ -29,6 +29,14 @@ const Navbar = () => (
       >
         Quiz
       </Link>
+
+      {/* Sign Up Button */}
+      <Link
+        to="/login"
+        className="px-4 py-2 bg-white text-[#2d6a4f] font-semibold rounded-md hover:bg-gray-100 transition duration-200"
+      >
+        Login
+      </Link>
     </div>
   </nav>
 );
