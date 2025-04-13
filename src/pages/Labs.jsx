@@ -53,17 +53,17 @@ const LabViewer = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-indigo-50 to-purple-100 p-6">
-      <h1 className="text-3xl font-bold text-indigo-700 mb-8">📂 Lab File Viewer</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-green-50 to-green-100 p-6">
+      <h1 className="text-3xl font-bold text-green-700 mb-8">📂 Lab File Viewer</h1>
 
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-md p-6">
+      <div className="w-full max-w-md bg-white rounded-3xl shadow-lg p-8">
         {/* Semester Dropdown */}
-        <label className="block mb-4">
-          <span className="block text-sm font-medium text-gray-700">Select Semester:</span>
+        <label className="block mb-6">
+          <span className="block text-sm font-medium text-green-600">Select Semester:</span>
           <select
             value={selectedSemester}
             onChange={handleSemesterChange}
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+            className="mt-2 block w-full p-3 border-2 border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition"
           >
             <option value="">-- Choose Semester --</option>
             {Object.keys(driveLinks).map((sem) => (
@@ -76,12 +76,12 @@ const LabViewer = () => {
 
         {/* Subject Dropdown */}
         {selectedSemester && (
-          <label className="block mb-4">
-            <span className="block text-sm font-medium text-gray-700">Select Subject:</span>
+          <label className="block mb-6">
+            <span className="block text-sm font-medium text-green-600">Select Subject:</span>
             <select
               value={selectedSubject}
               onChange={handleSubjectChange}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+              className="mt-2 block w-full p-3 border-2 border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition"
             >
               <option value="">-- Choose Subject --</option>
               {Object.keys(driveLinks[selectedSemester]).map((subject) => (
@@ -99,7 +99,7 @@ const LabViewer = () => {
             href={getDriveLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block w-full text-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+            className="mt-6 inline-block w-full text-center px-6 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition duration-300 shadow-md"
           >
             🔍 View Lab Files
           </a>
@@ -110,3 +110,4 @@ const LabViewer = () => {
 };
 
 export default LabViewer;
+

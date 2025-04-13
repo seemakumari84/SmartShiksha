@@ -42,24 +42,24 @@ const NotesDriveAccess = () => {
   const subjects = selectedSemester ? Object.keys(notesData[selectedSemester]) : [];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-100 via-white to-blue-100 flex flex-col items-center justify-center p-6">
-      <h1 className="text-3xl font-bold text-blue-700 mb-8">
-        📚 Access Notes Drive
+    <div className="min-h-screen bg-gradient-to-b from-green-100 via-white to-green-100 flex flex-col items-center justify-center p-6">
+      <h1 className="text-4xl font-extrabold text-green-700 mb-10">
+        📚 Access Your Notes Drive
       </h1>
 
-      <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-xl">
+      <div className="bg-white p-8 rounded-3xl shadow-2xl w-full max-w-xl border border-green-200">
         {/* Semester Dropdown */}
-        <div className="mb-4">
-          <label className="block font-semibold mb-2 text-gray-700">Select Semester</label>
+        <div className="mb-6">
+          <label className="block font-semibold mb-2 text-green-700">Select Semester</label>
           <select
             value={selectedSemester}
             onChange={(e) => {
               setSelectedSemester(e.target.value);
               setSelectedSubject("");
             }}
-            className="w-full p-2 border rounded-md"
+            className="w-full p-3 border-2 border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition"
           >
-            <option value="">-- Select Semester --</option>
+            <option value="">-- Choose Semester --</option>
             {Object.keys(notesData).map((semester) => (
               <option key={semester} value={semester}>
                 {semester}
@@ -70,14 +70,14 @@ const NotesDriveAccess = () => {
 
         {/* Subject Dropdown */}
         {selectedSemester && (
-          <div className="mb-4">
-            <label className="block font-semibold mb-2 text-gray-700">Select Subject</label>
+          <div className="mb-6">
+            <label className="block font-semibold mb-2 text-green-700">Select Subject</label>
             <select
               value={selectedSubject}
               onChange={(e) => setSelectedSubject(e.target.value)}
-              className="w-full p-2 border rounded-md"
+              className="w-full p-3 border-2 border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition"
             >
-              <option value="">-- Select Subject --</option>
+              <option value="">-- Choose Subject --</option>
               {subjects.map((subject) => (
                 <option key={subject} value={subject}>
                   {subject}
@@ -87,14 +87,14 @@ const NotesDriveAccess = () => {
           </div>
         )}
 
-        {/* Link to Drive */}
+        {/* Drive Link */}
         {selectedSubject && (
-          <div className="mt-4 text-center">
+          <div className="mt-6 text-center">
             <a
               href={notesData[selectedSemester][selectedSubject]}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full transition"
+              className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full transition duration-300 shadow-md"
             >
               📂 Open Notes Drive
             </a>

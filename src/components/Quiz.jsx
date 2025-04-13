@@ -13,6 +13,9 @@ const Quiz = () => {
   const [score, setScore] = useState(0);
   const [countdown, setCountdown] = useState(null);
 
+  // Shuffle options
+  const shuffle = (array) => array.sort(() => Math.random() - 0.5);
+
   // Fetch questions when topic is selected
   useEffect(() => {
     if (topic) {
@@ -29,7 +32,7 @@ const Quiz = () => {
     }
   }, [topic]);
 
-  // Countdown effect after questions are loaded
+  // Countdown effect
   useEffect(() => {
     if (questions.length > 0 && countdown === null) {
       setCountdown(5);
@@ -44,8 +47,6 @@ const Quiz = () => {
       }, 1000);
     }
   }, [questions]);
-
-  const shuffle = (array) => array.sort(() => Math.random() - 0.5);
 
   const handleOptionSelect = (questionIndex, selectedOption) => {
     setUserAnswers({ ...userAnswers, [questionIndex]: selectedOption });
@@ -69,78 +70,103 @@ const Quiz = () => {
     setCountdown(null);
   };
 
-  // Topic selection screen
+  // Topic Selection Screen
   if (!topic) {
     return (
-      <div className="max-w-xl mx-auto mt-10 bg-white dark:bg-[#1b4332] p-6 rounded-lg shadow-md text-center">
-        <h2 className="text-xl font-bold mb-4">What are you interested in?</h2>
-        <div className="space-x-4">
-          <button onClick={() => setTopic("tech")} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Tech</button>
-          <button onClick={() => setTopic("core")} className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Core Subjects</button>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#e0f7fa] to-[#c8e6c9]">
+        <div className="bg-white shadow-2xl rounded-2xl p-10 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">Choose Your Interest</h2>
+          <div className="space-x-6">
+            <button
+              onClick={() => setTopic("tech")}
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 transition-all text-white font-semibold rounded-full shadow-md"
+            >
+              Tech
+            </button>
+            <button
+              onClick={() => setTopic("core")}
+              className="px-6 py-3 bg-green-600 hover:bg-green-700 transition-all text-white font-semibold rounded-full shadow-md"
+            >
+               Core
+            </button>
+          </div>
         </div>
       </div>
     );
   }
 
-  // Loading state
+  // Loading screen
   if (questions.length === 0) {
-    return <div className="text-center mt-10 text-xl font-semibold animate-pulse">⏳ Loading questions...</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#f0fdf4] text-2xl font-bold animate-pulse">
+        ⏳ Fetching questions, please wait...
+      </div>
+    );
   }
 
-  // Countdown before quiz starts
+  // Countdown screen
   if (countdown > 0) {
     return (
-      <div className="text-center mt-20 text-4xl font-bold animate-pulse">
-        🕐 Starting in: {countdown}
+      <div className="min-h-screen flex flex-col items-center justify-center bg-[#fff7ed] text-5xl font-extrabold text-orange-600 animate-bounce">
+        ⏰ Quiz begins in: {countdown}
       </div>
     );
   }
 
-  // Quiz view
+  // Quiz interface
   return (
-    <div className="max-w-4xl mx-auto mt-10 bg-white dark:bg-[#1b4332] p-6 rounded-lg shadow-md max-h-[80vh] overflow-y-auto">
-      {!showResult ? (
-        <>
-          {questions.map((q, idx) => (
-            <div key={idx} className="mb-6">
-              <h3 className="font-semibold mb-2">
-                Q{idx + 1}: {q.question}
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {q.options.map((opt, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handleOptionSelect(idx, opt)}
-                    className={`text-left p-2 rounded border transition-colors ${
-                      userAnswers[idx] === opt
-                        ? "bg-green-200 dark:bg-green-700"
-                        : "bg-gray-100 dark:bg-gray-700"
-                    }`}
-                  >
-                    {opt}
-                  </button>
-                ))}
+    <div className="min-h-screen bg-gradient-to-br from-[#f1f8e9] to-[#e0f2f1] py-10">
+      <div className="max-w-5xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
+        {!showResult ? (
+          <>
+            <h1 className="text-3xl font-bold text-center text-green-800 mb-8"> Quiz Time!</h1>
+            {questions.map((q, idx) => (
+              <div key={idx} className="mb-6">
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                  Q{idx + 1}: {q.question}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {q.options.map((opt, i) => (
+                    <button
+                      key={i}
+                      onClick={() => handleOptionSelect(idx, opt)}
+                      className={`transition-all text-left px-4 py-2 border rounded-lg shadow-sm font-medium ${
+                        userAnswers[idx] === opt
+                          ? "bg-green-200 border-green-500 text-green-900"
+                          : "bg-gray-50 hover:bg-gray-100"
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
               </div>
+            ))}
+            <div className="text-center">
+              <button
+                onClick={calculateScore}
+                className="mt-6 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full shadow-md transition-all"
+              >
+                 Submit Quiz
+              </button>
             </div>
-          ))}
-          <button
-            onClick={calculateScore}
-            className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-          >
-            Submit Quiz
-          </button>
-        </>
-      ) : (
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">🎉 You scored {score} out of {questions.length}</h2>
-          <button
-            onClick={restartQuiz}
-            className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700"
-          >
-            Try Again
-          </button>
-        </div>
-      )}
+          </>
+        ) : (
+          <div className="text-center">
+            <h2 className="text-4xl font-extrabold text-green-700 mb-6">🎉 Quiz Complete!</h2>
+            <p className="text-2xl text-gray-700 mb-4">
+              You scored <span className="font-bold text-blue-600">{score}</span> out of{" "}
+              <span className="font-bold">{questions.length}</span>
+            </p>
+            <button
+              onClick={restartQuiz}
+              className="mt-4 px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-full shadow-md transition-all"
+            >
+              Restart Quiz
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
